@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "rm database.sql; node index.js 2>&1 >/dev/null; sqlite3 database.sqlite .schema"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "sequelize": "^4.8.2",
-    "sequelize-cli": "^3.0.0-0"
+    "sequelize-cli": "^3.0.0-0",
+    "sqlite3": "^3.1.10"
   }
 }
